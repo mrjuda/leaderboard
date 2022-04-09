@@ -26,18 +26,15 @@ ul {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bolder;
   margin: 0.4rem;
 }
 
-.hidden {
-  display: none;
-}
-
 .container {
-  display: grid;
-  grid-template-columns: 65% 35%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 4%;
 }
 
 .inner-container {
@@ -56,7 +53,7 @@ h1 {
   }
 
   .inner-title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 }
@@ -69,21 +66,19 @@ h1 {
     text-align: left;
 
     li,
-    .score-list-li {
-      margin: 0;
-      padding: 0.4rem 0.4rem;
-      border-bottom: 1px solid #ddd;
+    .score-set {
+      font-size: 0.8rem;
       text-align: left;
       list-style: none;
+      padding: 0.3rem 0.6rem;
+      margin: 0;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #ddd;
+    }
 
-      .score-set {
-        padding: 0.2rem;
-        font-size: 0.8rem;
-        text-align: left;
-        margin: 0.2rem;
-        border: none;
-        outline: none;
-      }
+    li:nth-child(odd) {
+      background-color: #eee;
     }
   }
 }
@@ -91,7 +86,7 @@ h1 {
 .add-score {
   display: flex;
   flex-direction: column;
-  height: 11rem;
+  height: 10.5rem;
 
   input {
     font-size: 0.8rem;
@@ -111,15 +106,47 @@ h1 {
   text-align: center;
   font-weight: bold;
   border: solid 0.2rem black;
-  width: fit-content;
+  width: 4rem;
   background-color: #fff;
   box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
   margin: 0;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-.new-input-btn {
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.add-button {
   margin: 0.6rem;
   align-self: flex-end;
+}
+
+.refresh-button {
+  align-self: flex-end;
+}
+
+/* ##### TABLET DESIGN ##### */
+
+@media screen and (min-width: 510px) {
+  .container {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin: 0 4%;
+  }
+}
+
+/* ##### DESKTOP DESIGN ##### */
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 11%;
+  }
 }
