@@ -5,9 +5,7 @@ module.exports = {
   entry: {
     index: {
       import: './src/index.js',
-      dependOn: 'shared',
     },
-    shared: 'lodash',
   },
   devtool: 'inline-source-map',
   devServer: {

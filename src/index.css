@@ -159,6 +159,21 @@ h1 {
   margin: 0;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 .add-button {
