@@ -28,7 +28,7 @@ ul {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bolder;
   margin: 0.4rem;
 }
@@ -38,10 +38,14 @@ h1 {
 }
 
 .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 65% 35%;
-      grid-template-columns: 65% 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 0 4%;
 }
 
 .inner-container {
@@ -71,7 +75,7 @@ h1 {
 }
 
 .inner-container .inner-title {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -90,22 +94,19 @@ h1 {
 }
 
 .score-board ul li,
-.score-board ul .score-list-li {
-  margin: 0;
-  padding: 0.4rem 0.4rem;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
-  list-style: none;
-}
-
-.score-board ul li .score-set,
-.score-board ul .score-list-li .score-set {
-  padding: 0.2rem;
+.score-board ul .score-set {
   font-size: 0.8rem;
   text-align: left;
-  margin: 0.2rem;
+  list-style: none;
+  padding: 0.3rem 0.6rem;
+  margin: 0;
   border: none;
   outline: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.score-board ul li:nth-child(odd) {
+  background-color: #eee;
 }
 
 .add-score {
@@ -116,7 +117,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 11rem;
+  height: 10.5rem;
 }
 
 .add-score input {
@@ -148,20 +149,56 @@ h1 {
   text-align: center;
   font-weight: bold;
   border: solid 0.2rem black;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 4rem;
   background-color: #fff;
   -webkit-box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
           box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
   margin: 0;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
 }
 
-.new-input-btn {
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.add-button {
   margin: 0.6rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.refresh-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+/* ##### TABLET DESIGN ##### */
+@media screen and (min-width: 510px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 65% 35%;
+        grid-template-columns: 65% 35%;
+    margin: 0 4%;
+  }
+}
+
+/* ##### DESKTOP DESIGN ##### */
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 11%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

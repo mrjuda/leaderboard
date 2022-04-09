@@ -11,7 +11,7 @@ Teamwork was also an essential tool to make things happen, so thank you to all m
 - Webpack
 
 ## 📺 Live Demo
-Live version: [mrjuda.github.io/leaderboard](https://mrjuda.github.io/leaderboard/)
+Live version: [mrjuda.github.io/leaderboard/dist](https://mrjuda.github.io/leaderboard/dist/)
 
 ## 🤓 Authors
 **Judá F Teixeira**

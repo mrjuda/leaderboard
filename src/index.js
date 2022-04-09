@@ -3,6 +3,6 @@ import './index.scss';
 
 const scoreBoard = new ScoreBoard();
 
-scoreBoard.paintToPage();
+scoreBoard.displayScoreSet();
 scoreBoard.setUpAddListener();
-scoreBoard.setInputFieldListeners();
+scoreBoard.setUpRefreshListener();
