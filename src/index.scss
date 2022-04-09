@@ -18,17 +18,17 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bolder;
   margin: 0.4rem;
-}
-
-.hidden {
-  display: none;
 }
 
 .container {
@@ -77,6 +77,9 @@ h1 {
       border-bottom: 1px solid #ddd;
     }
 
+    li:nth-child(odd) {
+      background-color: #eee;
+    }
   }
 }
 
@@ -109,7 +112,11 @@ h1 {
   margin: 0;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
-  
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .btn:hover {
@@ -126,3 +133,20 @@ h1 {
   align-self: flex-end;
 }
 
+/* ##### TABLET DESIGN ##### */
+
+@media screen and (min-width: 510px) {
+  .container {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin: 0 4%;
+  }
+}
+
+/* ##### DESKTOP DESIGN ##### */
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 11%;
+  }
+}
