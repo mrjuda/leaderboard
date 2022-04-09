@@ -7,10 +7,6 @@ module.exports = {
       import: './src/index.js',
       dependOn: 'shared',
     },
-    another: {
-      import: './src/modules/another-module.js',
-      dependOn: 'shared',
-    },
     shared: 'lodash',
   },
   devtool: 'inline-source-map',
