@@ -14,13 +14,7 @@ export default class ScoreBoard {
 
   scoreListTable = document.getElementById('scoreListTable');
 
-  // clearAllBtn = document.getElementById('clear-all-btn');
-
-  removeButton;
-
   inputField;
-
-  checkboxButton;
 
   static pushToStorage = (obj) => {
     const stringify = JSON.stringify(obj);
@@ -35,8 +29,6 @@ export default class ScoreBoard {
     </div>
         `;
   }
-
-  // Adds a unique class so it can be called by the addeventlistener later
 
   pullFromStorage = () => {
     if (!localStorage.getItem('strScore')) return 0;
@@ -69,7 +61,6 @@ export default class ScoreBoard {
       createdScoreSet.id = i + 1;
       this.scoreListTable.appendChild(createdScoreSet);
     }
-    // this.setRemoveListeners();
   }
 
   updateTable = () => {
@@ -94,19 +85,7 @@ export default class ScoreBoard {
     this.updateTable();
     this.paintToPage();
     this.setInputFieldListeners();
-    // this.setCheckboxFieldListeners();
   }
-
-  // removeBook = (id) => {
-  //   for (let i = 0; i < this.table.length; i += 1) {
-  //     if (this.table[i].id === parseInt(id, 10)) {
-  //       this.table.splice(i, 1);
-  //       this.updateTable();
-  //     }
-  //     this.paintToPage();
-  //     this.setCheckboxFieldListeners();
-  //   }
-  // }
 
   updateScoreSet = (id, text) => {
     for (let i = 0; i < this.table.length; i += 1) {
@@ -116,36 +95,6 @@ export default class ScoreBoard {
       }
     }
   }
-
-  updateCompletion = (id, completed) => {
-    for (let i = 0; i < this.table.length; i += 1) {
-      if (this.table[i].id === parseInt(id, 10)) {
-        this.table[i].completed = completed;
-        this.updateTable();
-      }
-    }
-  }
-
-  // showUnchecked = () => {
-  //   const pendingTasks = this.table.filter((task) => task.completed === false);
-  //   this.table = [];
-  //   pendingTasks.forEach((task) => {
-  //     this.table.push(task);
-  //   });
-  //   this.updateTable();
-  //   this.paintToPage();
-  //   this.setInputFieldListeners();
-  //   this.setCheckboxFieldListeners();
-  // }
-
-  // setRemoveListeners = () => {
-  //   this.removeButton = document.querySelectorAll('.removeButton');
-  //   this.removeButton.forEach((button) => {
-  //     button.addEventListener('click', (e) => {
-  //       this.removeBook(e.target.id);
-  //     });
-  //   });
-  // }
 
   setUpAddListener = () => {
     this.addButton.addEventListener('click', () => {
@@ -165,34 +114,4 @@ export default class ScoreBoard {
       });
     });
   }
-
-  // setCheckboxFieldListeners = () => {
-  //   this.checkboxButton = document.querySelectorAll('.box');
-  //   this.checkboxButton.forEach((checkbox) => {
-  //     checkbox.addEventListener('click', (e) => {
-  //       let taskChecked = false;
-  //       const crossTask = document.querySelector(`.taskId${e.target.parentElement.id}`);
-  //       if (e.target.classList.contains('unchecked')) {
-  //         taskChecked = true;
-  //         crossTask.classList.add('done');
-  //         e.target.classList.toggle('checked');
-  //         e.target.classList.toggle('unchecked');
-  //       } else if (e.target.classList.contains('checked')) {
-  //         taskChecked = false;
-  //         crossTask.classList.remove('done');
-  //         e.target.classList.toggle('checked');
-  //         e.target.classList.toggle('unchecked');
-  //       }
-  //       this.updateCompletion(e.target.parentElement.id, taskChecked);
-  //     });
-  //   });
-  // }
-
-  // Sets the listener for the clear button
-
-  // setClearAll = () => {
-  //   this.clearAllBtn.addEventListener('click', () => {
-  //     this.showUnchecked();
-  //   });
-  // }
 }

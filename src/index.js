@@ -6,24 +6,22 @@ const scoreBoard = new ScoreBoard();
 scoreBoard.paintToPage();
 scoreBoard.setUpAddListener();
 scoreBoard.setInputFieldListeners();
-// scoreBoard.setCheckboxFieldListeners();
-// scoreBoard.setClearAll();
 
 // TESTS PROMISES
 
-console.log('Hi friend');
+// console.log('Hi friend');
 
-const myPromise = new Promise((resolve, reject) => {
-  const connection = false;
-  if (connection) {
-    resolve('connection established');
-  } else {
-    reject();
-  }
-});
+// const myPromise = new Promise((resolve, reject) => {
+//   const connection = false;
+//   if (connection) {
+//     resolve('connection established');
+//   } else {
+//     reject();
+//   }
+// });
 
-myPromise.then((message) => {
-  console.log(message);
-}).catch((message) => {
-  console.log(message);
-});
+// myPromise.then((message) => {
+//   console.log(message);
+// }).catch((message) => {
+//   console.log(message);
+// });

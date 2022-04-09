@@ -48,14 +48,6 @@ h1 {
   background-color: #fff;
   font-size: 0.8rem;
   margin: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-items: center;
   -webkit-box-shadow: 0.2rem 0.2rem 0.9rem #bbb;
           box-shadow: 0.2rem 0.2rem 0.9rem #bbb;
 }
@@ -83,6 +75,16 @@ h1 {
   font-weight: bold;
 }
 
+.score-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .score-board ul {
   text-align: left;
 }
@@ -107,8 +109,6 @@ h1 {
 }
 
 .add-score {
-  background-color: #fff;
-  font-size: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,11 +116,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-box-shadow: 0.2rem 0.2rem 0.9rem #bbb;
-          box-shadow: 0.2rem 0.2rem 0.9rem #bbb;
+  height: 11rem;
 }
 
 .add-score input {
