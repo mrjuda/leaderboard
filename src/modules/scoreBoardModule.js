@@ -6,6 +6,8 @@ export default class ScoreBoard {
 
   scoreTable;
 
+  refreshButton = document.getElementById('refreshButton');
+
   addButton = document.getElementById('addButton');
 
   newName = document.getElementById('newName');
@@ -84,7 +86,7 @@ export default class ScoreBoard {
     this.table.push(scoreSet);
     this.updateTable();
     this.paintToPage();
-    this.setInputFieldListeners();
+    // this.setInputFieldListeners();
   }
 
   updateScoreSet = (id, text) => {
@@ -105,13 +107,13 @@ export default class ScoreBoard {
     });
   }
 
-  setInputFieldListeners = () => {
-    this.inputField = document.querySelectorAll('.score-set');
-    this.inputField.forEach((input) => {
-      input.addEventListener('input', (e) => {
-        const text = e.target.value;
-        this.updateScoreSet(e.target.parentElement.id, text);
-      });
-    });
-  }
+  // setInputFieldListeners = () => {
+  //   this.inputField = document.querySelectorAll('.score-set');
+  //   this.inputField.forEach((input) => {
+  //     input.addEventListener('input', (e) => {
+  //       const text = e.target.value;
+  //       this.updateScoreSet(e.target.parentElement.id, text);
+  //     });
+  //   });
+  // }
 }

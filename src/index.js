@@ -5,4 +5,4 @@ const scoreBoard = new ScoreBoard();
 
 scoreBoard.paintToPage();
 scoreBoard.setUpAddListener();
-scoreBoard.setInputFieldListeners();
+// scoreBoard.setInputFieldListeners();

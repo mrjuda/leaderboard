@@ -26,7 +26,7 @@ ul {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bolder;
   margin: 0.4rem;
 }
@@ -36,8 +36,9 @@ h1 {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 65% 35%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 4%;
 }
 
 .inner-container {
@@ -56,7 +57,7 @@ h1 {
   }
 
   .inner-title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 }
@@ -91,7 +92,7 @@ h1 {
 .add-score {
   display: flex;
   flex-direction: column;
-  height: 11rem;
+  height: 10.5rem;
 
   input {
     font-size: 0.8rem;
@@ -111,7 +112,8 @@ h1 {
   text-align: center;
   font-weight: bold;
   border: solid 0.2rem black;
-  width: fit-content;
+  // width: fit-content;
+  width: 4rem;
   background-color: #fff;
   box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
   margin: 0;
@@ -119,7 +121,30 @@ h1 {
   cursor: pointer;
 }
 
-.new-input-btn {
+.add-button {
   margin: 0.6rem;
   align-self: flex-end;
+}
+
+.refresh-button {
+  // margin: 0.6rem;
+  align-self: flex-end;
+}
+
+/* ##### TABLET DESIGN ##### */
+
+@media screen and (min-width: 510px) {
+  .container {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin: 0 4%;
+  }
+}
+
+/* ##### DESKTOP DESIGN ##### */
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 12%;
+  }
 }
