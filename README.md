@@ -19,5 +19,11 @@ Live version: [mrjuda.github.io/leaderboard/dist](https://mrjuda.github.io/leade
 - LinkedIn: [@judateixeira](https://www.linkedin.com/in/judateixeira "Judá Teixeira's Linkedin profile")
 - Twitter: [@judalabs](https://twitter.com/judalabs)
 
+## 🤝 Contributors
+**Juan Sebastian**
+- GitHub: [@Juanse7793](https://github.com/Juanse7793 "Juan Sebastian's GitHub profile")
+- LinkedIn: [@juan-sebastian-sotomayor-2bb395198](https://www.linkedin.com/in/juan-sebastian-sotomayor-2bb395198/ "Juan Sebastian's Linkedin profile")
+- Twitter: [@Juanse77930](https://twitter.com/Juanse77930 "Juan Sebastian's Twitter profile")
+
 ## 📝License
 This project is [MIT](https://github.com/mrjuda/leaderboard/blob/main/LICENSE) licensed.
